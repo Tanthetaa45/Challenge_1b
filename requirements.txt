@@ -1,0 +1,7 @@
+numpy
+pymupdf
+opencv-python
+Pillow
+torch
+tqdm
+scikit-learn
