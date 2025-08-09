@@ -1,0 +1,120 @@
+{
+    "title": "Rotate, move, delete, extract, or renumber pages in a PDF",
+    "outline": [
+        {
+            "level": "H3",
+            "text": "Export PDF images to another format",
+            "page": 0
+        },
+        {
+            "level": "H3",
+            "text": "Rotate pages in a PDF",
+            "page": 2
+        },
+        {
+            "level": "H2",
+            "text": "Extract pages from a PDF",
+            "page": 3
+        },
+        {
+            "level": "H3",
+            "text": "Extract random pages from a PDF",
+            "page": 3
+        },
+        {
+            "level": "H3",
+            "text": "Select the Extract pages under PAGE OPTIONS.",
+            "page": 4
+        },
+        {
+            "level": "H2",
+            "text": "Split PDFs into multiple documents",
+            "page": 5
+        },
+        {
+            "level": "H3",
+            "text": "Top-level Bookmarks",
+            "page": 5
+        },
+        {
+            "level": "H3",
+            "text": "Split multiple PDFs",
+            "page": 5
+        },
+        {
+            "level": "H3",
+            "text": "Top-level Bookmarks",
+            "page": 6
+        },
+        {
+            "level": "H2",
+            "text": "Move or copy pages in a PDF",
+            "page": 7
+        },
+        {
+            "level": "H3",
+            "text": "Move or copy a page",
+            "page": 7
+        },
+        {
+            "level": "H3",
+            "text": "Copy a page between two PDFs",
+            "page": 7
+        },
+        {
+            "level": "H2",
+            "text": "Delete or replace pages in a PDF",
+            "page": 9
+        },
+        {
+            "level": "H3",
+            "text": "Delete multiple pages in a PDF",
+            "page": 9
+        },
+        {
+            "level": "H3",
+            "text": "Delete a page in a PDF",
+            "page": 10
+        },
+        {
+            "level": "H3",
+            "text": "Replace pages in a PDF",
+            "page": 10
+        },
+        {
+            "level": "H3",
+            "text": "Replace pages between multiple PDFs",
+            "page": 10
+        },
+        {
+            "level": "H2",
+            "text": "Renumber pages in a PDF",
+            "page": 12
+        },
+        {
+            "level": "H2",
+            "text": "Edit Scanned PDFs",
+            "page": 13
+        },
+        {
+            "level": "H3",
+            "text": "Recognize text on scanned PDF",
+            "page": 13
+        },
+        {
+            "level": "H3",
+            "text": "Edit a scanned document",
+            "page": 14
+        },
+        {
+            "level": "H1",
+            "text": "Enhance scanned file or camera images for clear PDFs",
+            "page": 15
+        },
+        {
+            "level": "H3",
+            "text": "Enhance camera image",
+            "page": 15
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "input_documents": [
+      "Learn Acrobat - Create and Convert_1.pdf",
+      "Learn Acrobat - Create and Convert_2.pdf",
+      "Learn Acrobat - Edit_1.pdf",
+      "Learn Acrobat - Edit_2.pdf",
+      "Learn Acrobat - Export_1.pdf",
+      "Learn Acrobat - Export_2.pdf",
+      "Learn Acrobat - Fill and Sign.pdf",
+      "Learn Acrobat - Generative AI_1.pdf",
+      "Learn Acrobat - Generative AI_2.pdf",
+      "Learn Acrobat - Request e-signatures_1.pdf",
+      "Learn Acrobat - Request e-signatures_2.pdf",
+      "Learn Acrobat - Share_1.pdf",
+      "Learn Acrobat - Share_2.pdf",
+      "Test Your Acrobat Exporting Skills.pdf",
+      "The Ultimate PDF Sharing Checklist.pdf"
+    ],
+    "persona": "HR professional",
+    "job_to_be_done": "Create and manage fillable forms for onboarding and compliance.",
+    "processing_timestamp": "2025-08-09T17:15:14.773905"
+  },
+  "extracted_sections": [
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "Is the form fillable?",
+      "page_number": 7,
+      "importance_rank": 1
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_2.pdf",
+      "section_title": "Compliance Standard",
+      "page_number": 7,
+      "importance_rank": 2
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "section_title": "PDF/A Compliance",
+      "page_number": 20,
+      "importance_rank": 3
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_1.pdf",
+      "section_title": "Sign documents",
+      "page_number": 19,
+      "importance_rank": 4
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_2.pdf",
+      "section_title": "Establish long-term signature validation",
+      "page_number": 9,
+      "importance_rank": 5
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "refined_text": "Once you add a signature or an initial to a form and save it, you cannot edit it again.  3. To add your initials:  1. From the Quick actions toolbar, select Add your signature or initials  .  Select Add Initials. Your initials appear in the field.  2. To adjust the placement of your signature, hover over it until you see a plus  icon, and then click and move the signature as desired.   3. To adjust the size of your signature, hover over the blue circle at the corner and  then hold and drag it as desired.    Note:   If you want to use an image as your signature or initials:  •  Sign your name in black ink on a clean, blank sheet of white paper. Sign in the middle  of the paper so you don't photograph or scan the edges.  •  Photograph or scan your signature. If you are taking a picture of your signature, make  sure that the page is lit and that no shadows fall across the signature.  •  Transfer the photo or scan to your computer. Acrobat/Reader accepts JPG, JPEG, PNG,  GIF, TIFF, TIF, an",
+      "page_number": 7
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_2.pdf",
+      "refined_text": "Adjusts the size of each worksheet so that all the entries on that worksheet appear on the same  page of the PDF.  Fit To Paper Width  Adjusts the width of each worksheet so that all the columns on that worksheet appear on one  page in the PDF.  Prompt For Selecting Excel Sheets  Opens a dialog box at the beginning of the file conversion process. In this dialog box, you can  specify which worksheets are included in the PDF and the order in which the sheets appear in  the PDF.    PowerPoint-specific options on the Settings tab  Preserve Slide Transitions  Converts PowerPoint slide transition effects to PDF transition effects.  Convert Hidden Slides To PDF Pages  Converts any PowerPoint slides that are not seen in the usual playing of the presentation to  PDF pages.  Convert Speaker Notes  Converts any speaker notes for the PowerPoint presentation into Text notes in the PDF.    Email-specific options on the Settings tab  The following options appear when you open the PDFMaker settings fr",
+      "page_number": 7
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "refined_text": "View PDFMaker conversion settings  PDFMaker conversion settings vary according to file types. For example, the options available  for PowerPoint files aren’t the same as the options available for Outlook files. Once you’ve  selected conversion settings, those choices apply to all subsequent PDFs you create from that  file type. It’s a good idea to review the settings occasionally.  1. Open a PDFMaker-enabled application (such as Word or Excel).  2. Do one of the following:     •  (Lotus Notes) Choose Actions > Change Adobe PDF Conversion Settings.  •  (Office 2010 applications) In the Acrobat or Adobe PDF ribbon,  click Preferences.  •  (All other applications) Choose Adobe PDF > Change Conversion Settings.  3. (Optional) To revert to the original default settings, click Restore Defaults on  the Settings tab.    Settings tab of the Adobe PDFMaker preferences  The settings available for PDFMaker depend on the application in which you’re using  PDFMaker.  Conversion Settings  Specifies t",
+      "page_number": 20
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_1.pdf",
+      "refined_text": "•  Download Form Field Data - Downloads a CSV file of the field-level content for all  child agreements spawned from this parent Bulk Send that have been completed.  •  Download Individual Files - Provides the option to download the individual PDF files  if multiple files were used to create the web form.  •  Hide/Unhide Bulk Send- Hide/Unhiding the Bulk Send simply removes (or adds) the  Bulk Send from your normal Manage page view.  •  Share - Shares the Bulk Send along with its status with the user email you provide.  Shared web forms can be viewed on the Manage page, but do not allow editing.  •  A PDF copy of the Bulk Send parent document (without added fields) is emailed to the  sharee.  •  View Activity Report  •  View the current status of all child agreements created by the Bulk Send parent  template.  •  Add Notes - Allows the user to make personal notes for the Bulk Send.  •  Agreements summary/filter (green square) - The Agreements section shows up to five  values that refle",
+      "page_number": 19
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_2.pdf",
+      "refined_text": "certificates that are signed and certified by a trust anchor. Therefore, administrators can  preconfigure client installations or allow end users to add a trust anchor.    Sign component PDFs and PDF Portfolios   You can sign component PDFs within a PDF Portfolio, or sign the PDF Portfolio as a whole.  Signing a component PDF locks the PDF for editing and secures its content. After signing all  the component PDFs, you can sign the entire PDF Portfolio to finalize it. Alternatively, you can  sign the PDF Portfolio as a whole to lock the content of all component PDFs simultaneously.  •  To sign a component PDF, see Signing PDFs. The signed PDF is automatically saved to  the PDF Portfolio.  •  To sign a PDF Portfolio as a whole, sign the cover sheet (View > Portfolio > Cover  Sheet). Once you sign the PDF Portfolio as a whole, you can’t add signatures to the  component documents. However, you can add more signatures to the cover sheet.    Digitally sign on attachments to component PDFs  Y",
+      "page_number": 9
+    }
+  ]
+}

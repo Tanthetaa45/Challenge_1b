@@ -1,0 +1,95 @@
+{
+    "title": "Multiple document support in AI Assistant",
+    "outline": [
+        {
+            "level": "H3",
+            "text": "Note:",
+            "page": 0
+        },
+        {
+            "level": "H2",
+            "text": "Persistent chat history",
+            "page": 0
+        },
+        {
+            "level": "H2",
+            "text": "Clear chat history",
+            "page": 1
+        },
+        {
+            "level": "H2",
+            "text": "Copy chat history",
+            "page": 2
+        },
+        {
+            "level": "H1",
+            "text": "Read-aloud generated responses",
+            "page": 3
+        },
+        {
+            "level": "H2",
+            "text": "Change the playback speed",
+            "page": 5
+        },
+        {
+            "level": "H2",
+            "text": "Custom voice for read-aloud feature",
+            "page": 6
+        },
+        {
+            "level": "H3",
+            "text": "Note:",
+            "page": 9
+        },
+        {
+            "level": "H2",
+            "text": "Remove files from a collection",
+            "page": 10
+        },
+        {
+            "level": "H1",
+            "text": "Request access in Acrobat",
+            "page": 11
+        },
+        {
+            "level": "H2",
+            "text": "ccess from the Admin Console (Teams hybrid admins)",
+            "page": 11
+        },
+        {
+            "level": "H3",
+            "text": "Note:",
+            "page": 13
+        },
+        {
+            "level": "H1",
+            "text": "Review the status of your request",
+            "page": 14
+        },
+        {
+            "level": "H1",
+            "text": "Common questions",
+            "page": 15
+        },
+        {
+            "level": "H3",
+            "text": "What happens if my request is declined?",
+            "page": 15
+        },
+        {
+            "level": "H1",
+            "text": "Prerequisites",
+            "page": 16
+        },
+        {
+            "level": "H3",
+            "text": "Note:",
+            "page": 16
+        },
+        {
+            "level": "H1",
+            "text": "License deployment",
+            "page": 17
+        }
+    ]
+}

@@ -1,1 +1,25 @@
+# macOS system files
+.DS_Store
+
+# Python cache and build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+build/
+dist/
+
+# Virtual environments
 Wine-ML/
+.venv/
+env/
+venv/
+
+# Environment files
+.env
+.env.*
+
+# Project-specific
+

@@ -1,0 +1,65 @@
+{
+    "title": "A Historical Journey Through the South of France",
+    "outline": [
+        {
+            "level": "H3",
+            "text": "Introduction",
+            "page": 0
+        },
+        {
+            "level": "H1",
+            "text": "Marseille: The Oldest City in France",
+            "page": 1
+        },
+        {
+            "level": "H2",
+            "text": "Nice: The Jewel of the French Riviera",
+            "page": 2
+        },
+        {
+            "level": "H1",
+            "text": "Avignon: The City of Popes",
+            "page": 3
+        },
+        {
+            "level": "H2",
+            "text": "Nîmes: The Rome of France",
+            "page": 4
+        },
+        {
+            "level": "H3",
+            "text": "Carcassonne: A Medieval Fortress",
+            "page": 5
+        },
+        {
+            "level": "H2",
+            "text": "Toulouse: The Pink City",
+            "page": 6
+        },
+        {
+            "level": "H3",
+            "text": "Arles: A Roman Treasure",
+            "page": 7
+        },
+        {
+            "level": "H1",
+            "text": "Aix-en-Provence: A City of Art and Culture",
+            "page": 8
+        },
+        {
+            "level": "H1",
+            "text": "Montpellier: A University City with Medieval Charm",
+            "page": 9
+        },
+        {
+            "level": "H1",
+            "text": "Perpignan: A Blend of French and Catalan Cultures",
+            "page": 10
+        },
+        {
+            "level": "H3",
+            "text": "Conclusion",
+            "page": 11
+        }
+    ]
+}

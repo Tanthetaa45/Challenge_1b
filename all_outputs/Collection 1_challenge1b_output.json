@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "input_documents": [
+      "South of France - Cities.pdf",
+      "South of France - Cuisine.pdf",
+      "South of France - History.pdf",
+      "South of France - Restaurants and Hotels.pdf",
+      "South of France - Things to Do.pdf",
+      "South of France - Tips and Tricks.pdf",
+      "South of France - Traditions and Culture.pdf"
+    ],
+    "persona": "Travel Planner",
+    "job_to_be_done": "Plan a trip of 4 days for a group of 10 college friends.",
+    "processing_timestamp": "2025-08-09T17:15:14.099816"
+  },
+  "extracted_sections": [
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "section_title": "Beach Trips",
+      "page_number": 6,
+      "importance_rank": 1
+    },
+    {
+      "document": "South of France - Cities.pdf",
+      "section_title": "Student Life",
+      "page_number": 9,
+      "importance_rank": 2
+    },
+    {
+      "document": "South of France - Things to Do.pdf",
+      "section_title": "Outdoor Adventures",
+      "page_number": 8,
+      "importance_rank": 3
+    },
+    {
+      "document": "South of France - Traditions and Culture.pdf",
+      "section_title": "Pilgrimages",
+      "page_number": 3,
+      "importance_rank": 4
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "section_title": "Hotels",
+      "page_number": 7,
+      "importance_rank": 5
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "South of France - Tips and Tricks.pdf",
+      "refined_text": "Packing for Kids  Clothing  •  Comfortable Wear: T-shirts, shorts, pants, dresses, pajamas, and underwear.  •  Layering: Depending on the season, pack sweaters, jackets, and hats.  •  Swimwear: Swimsuits and cover-ups for beach or pool days.  •  Accessories: A sun hat, sunglasses, and a lightweight jacket.  •  Additional Tips: Pack extra clothing for kids, as they may need more changes of  clothes than adults.  Essentials  •  Diapers and Wipes: For babies or toddlers, pack enough diapers and wipes.  •  Snacks: Bring a variety of snacks for travel and outings.  •  Toys and Entertainment: Favorite toys, books, or games. Consider a tablet with pre- downloaded content.  •  Additional Tips: Pack a small backpack for each child with their essentials to keep  them engaged. Include comfort items like a favorite blanket or stuﬀed animal.  Toiletries  •  Basic Toiletries: Toothbrush, toothpaste, shampoo, body wash, and personal hygiene  items.  •  Sunscreen: Kid-friendly sunscreen.  •  Additiona",
+      "page_number": 6
+    },
+    {
+      "document": "South of France - Cities.pdf",
+      "refined_text": "Toulouse: The Pink City  History  Toulouse, known as \"La Ville Rose\" (The Pink City) due to its distinctive terracotta buildings,  is a vibrant city with a rich history. It was an important center during the Roman period and  later became a hub of the aerospace industry. Toulouse has been a center of learning and  culture for centuries, with a prestigious university and numerous research institutions.  Key Attractions  •  Basilica of Saint-Sernin: This Romanesque basilica, built between the 11th and 13th  centuries, is a UNESCO World Heritage site. It is one of the largest and best-preserved  Romanesque churches in Europe.  •  Capitole de Toulouse: The city's town hall and theater, the Capitole, is an impressive  building with a neoclassical facade. It has been the seat of municipal power since the  12th century.  •  Jacobins Convent: This Gothic convent, founded in the 13th century, is known for its  beautiful cloister and the relics of Saint Thomas Aquinas.  •  Cité de l'Espace: This",
+      "page_number": 9
+    },
+    {
+      "document": "South of France - Things to Do.pdf",
+      "refined_text": "Shopping and Markets  The South of France is a shopper's paradise, with a variety of markets, boutiques, and artisan  shops:  Local Markets  •  Nice: Explore the vibrant Cours Saleya Market.  •  Cannes: Visit Marché Forville for fresh seafood and local produce.  •  Avignon: Discover local products at Marché des Halles.  •  Aix-en-Provence: Browse the stalls at the daily market on Place Richelme.  •  Saint-Rémy-de-Provence: Enjoy the lively Wednesday market with local specialties.  •  Uzès: Visit the Saturday market for fresh produce and artisanal goods.  •  Sarlat: Explore the bustling market in the heart of the medieval town.  Boutique Shopping  •  Cannes: Shop along the famous Rue d'Antibes, lined with high-end boutiques,  designer stores, and luxury brands.  •  Aix-en-Provence: Browse shops and cafes on Cours Mirabeau, an elegant boulevard  with a variety of stores.  •  Nice: Find charming boutiques in the old town, oﬀering handmade soaps, ceramics,  and local crafts.  •  Saint-Trop",
+      "page_number": 8
+    },
+    {
+      "document": "South of France - Traditions and Culture.pdf",
+      "refined_text": "accompanied by shepherds and their dogs. It's a unique opportunity to witness a living  tradition and enjoy local food and music.    Traditional Sports and Games  Pétanque  Pétanque is a popular game in the South of France, particularly in Provence. Played with  metal balls on a gravel surface, the objective is to throw the balls as close as possible to a  small wooden ball called the cochonnet. Pétanque is more than just a game; it's a social  activity that brings people together in village squares and parks. The relaxed atmosphere and  friendly competition make it a beloved pastime.  Course Camarguaise  The Course Camarguaise is a traditional bullfighting sport unique to the Camargue region.  Unlike Spanish bullfighting, the objective is not to harm the bull but to remove ribbons and  other decorations from its horns. The razeteurs, or participants, demonstrate agility and  bravery as they dodge the bull's charges. The sport is deeply rooted in local culture and is  often accompanied",
+      "page_number": 3
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "refined_text": "•  La Villa Madie (Cassis): A two-Michelin-starred restaurant oﬀering a variety of dishes  inspired by the Mediterranean. The stunning views and exceptional service make it a  top choice for luxurious dining.  •  Le Clos des Sens (Annecy): A three-Michelin-starred restaurant oﬀering a variety of  dishes made with fresh, local ingredients. The elegant setting and exceptional service  make it a top choice for fine dining.  •  Le Pavillon Ledoyen (Paris): A three-Michelin-starred restaurant oﬀering a variety of  dishes made with fresh, local ingredients. The elegant setting and exceptional service  make it a top choice for fine dining.  •  Le Pré Catelan (Paris): A three-Michelin-starred restaurant oﬀering a variety of dishes  made with fresh, local ingredients. The elegant setting and exceptional service make it  a top choice for fine dining.      ",
+      "page_number": 7
+    }
+  ]
+}
