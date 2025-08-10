@@ -23,3 +23,9 @@ venv/
 
 # Project-specific
 
+._*
+.AppleDouble
+.Spotlight-V100
+.Trashes
+.fseventsd
+Icon?
