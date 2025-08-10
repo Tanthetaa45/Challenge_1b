@@ -29,3 +29,6 @@ venv/
 .Trashes
 .fseventsd
 Icon?
+# macOS metadata
+._*
+.AppleDouble
