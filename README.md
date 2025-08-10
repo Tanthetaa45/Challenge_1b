@@ -1,90 +1,165 @@
 # Adobe India Hackathon 2025 – Challenge 1B  
-**Automated PDF-Outline Extraction & Top-5 Section Ranking**
+**Automated PDF‑Outline Extraction & Top‑5 Section Ranking (fully offline)**
 
-### 📑 Project Purpose  
-This repository delivers a two-stage, fully-offline pipeline that:
+## Project Purpose
+This repository implements a two‑stage pipeline that runs fully on your machine:
 
-1. Detects headings in every page of the challenge PDFs with **DocLayout-YOLO**  
-2. Ranks those headings against each collection’s *job-to-be-done* using a local **Sentence-Transformers** model, keeping **only the top 5** most-relevant sections  
+1. **Heading extraction** for every PDF page (DocLayout‑YOLO or your extractor).
+2. **Semantic ranking** of those headings against each collection’s *job‑to‑be‑done* using local Sentence‑Transformers (bi‑encoder recall + cross‑encoder rerank).
 
-Final JSONs (`challenge1b_output.json`) are produced per collection and are ready for submission to Adobe’s scorer.
+The pipeline emits one final JSON per collection:  
+`all_outputs/<CollectionName>_challenge1b_output.json`.
 
 ---
 
-## 1 Repository Layout
+## Repository Layout
 
-
-adobe_hackathon_1b/
-├─ main/ # core modules (YOLO wrapper, helpers)
-│ └─ doclayout_yolo.py
-├─ models/
-│ └─ model.pt # ← add YOLO weights here
-├─ Challenge_1b/
-│ └─ Collection n/
-│ ├─ PDFs/ # input PDFs from Adobe
-│ ├─ output_json/ # per-PDF outlines + final JSON
-│ └─ processed_images/ # annotated page images
-├─ extract_headings.py # step ① – heading detection
-├─ rank_headings_top5.py # step ② – local SLM ranking
+```
+Challenge_1b/
+├─ all_outputs/                  # final per‑collection JSONs
+├─ model/                        # optional weights or models
+├─ output/                       # legacy outlines (older scripts)
+├─ output_json/                  # legacy outlines (older scripts)
+├─ pdf_files/
+│  ├─ Collection 1/
+│  │  ├─ PDFS/                   # input PDFs for this collection
+│  │  └─ challenge1b_input.json  # persona + job + doc list
+│  ├─ Collection 2/
+│  └─ Collection 3/
+├─ processed_images/             # annotated pages (if produced)
+├─ Persona_pdfs.py               # Stage 2: rank & produce final JSONs
+├─ process_pdfs.py               # Stage 1: your PDF → outline generator
 ├─ requirements.txt
 └─ README.md
+```
 
+> **Note**  
+> `Persona_pdfs.py` expects outline JSONs at `pdf_files/output/<PDF‑stem>.json`.  
+> If your extractor writes elsewhere (e.g., repo‑root `output/`), either move the files or change `OUTLINE_ROOT` in `Persona_pdfs.py`.
 
 ---
 
-## 2 Quick Start
+## Quick Start
 
-### 2.1 Clone & set up
-
-
-git clone <your-fork-url> adobe_hackathon_1b
-cd adobe_hackathon_1b
+### 1) Environment
+```bash
 python3 -m venv .venv
-source .venv/bin/activate # Windows: .venv\Scripts\activate.bat
+
+# macOS (zsh/bash)
+source .venv/bin/activate
+# macOS (fish shell)
+source .venv/bin/activate.fish
+# Windows (PowerShell)
+.\.venv\Scripts\Activate.ps1
+
 pip install -r requirements.txt
+```
 
+### 2) Put PDFs and inputs in place
+```
+pdf_files/Collection X/PDFS/Your.pdf
+pdf_files/Collection X/challenge1b_input.json
+```
 
-### 2.2 Add model weights
-Download **`model.pt`** supplied by Adobe and place it at:
+Minimal `challenge1b_input.json` example:
+```json
+{
+  "documents": [
+    {"filename": "South of France - Cities.pdf"},
+    {"filename": "South of France - Cuisine.pdf"},
+    {"filename": "South of France - History.pdf"},
+    {"filename": "South of France - Restaurants and Hotels.pdf"},
+    {"filename": "South of France - Things to Do.pdf"},
+    {"filename": "South of France - Tips and Tricks.pdf"},
+    {"filename": "South of France - Traditions and Culture.pdf"}
+  ],
+  "persona": { "role": "Travel Planner" },
+  "job_to_be_done": { "task": "Plan a trip of 4 days for a group of 10 college friends." }
+}
+```
 
-adobe_hackathon_1b/models/model.pt
+### 3) Stage 1 — Generate per‑PDF outlines
+Run your extractor so that each `PDFS/*.pdf` has a matching outline JSON at:
+```
+pdf_files/output/<PDF‑stem>.json
+```
 
+### 4) Stage 2 — Rank & produce final JSONs
+From repo root:
+```bash
+python Persona_pdfs.py
+```
+You should see logs like:
+```
+[PROCESS] pdf_files/Collection 1
+        → saved Collection 1_challenge1b_output.json
+```
+Final files appear in:
+```
+all_outputs/<CollectionName>_challenge1b_output.json
+```
+
+### 5) Package for submission (optional)
+```bash
+cd all_outputs
+zip -r submission_1b.zip *.json
+```
 
 ---
 
-## 3 Run the Pipeline
+## How it Works (short)
+- **Recall (bi‑encoder)**: `all‑MiniLM‑L6‑v2` embeds the job text and candidate section titles, keeping the best `RECALL_TOP_N`.
+- **Rerank (cross‑encoder)**: `ms‑marco‑MiniLM‑L‑12‑v2` scores `(job, title)` pairs jointly for sharper ordering.
+- **Top‑K**: The best `TOP_K` become `extracted_sections`. For each, the script grabs page text (PyMuPDF) to build `subsection_analysis`.
 
-### 3.1 Step ① — Extract headings (per-PDF outlines)
-
-
-cd Challenge_1b
-zip -r submission_1b.zip Collection\ */output_json/challenge1b_output.json
-
-
-Upload `submission_1b.zip` to the hackathon portal.
-
----
-
-## 4 Script Details
-
-| Script | Purpose | Typical speed (CPU) |
-|--------|---------|---------------------|
-| `extract_headings.py` | PDF → images → YOLO detection → per-PDF outline JSON | 0.5–2 s per page |
-| `rank_headings_top5.py` | Local Sentence-Transformer ranks headings, outputs final JSON (TOP 5) | < 1 s for 200 headings |
+Key tunables in `Persona_pdfs.py`:
+```python
+TOP_K = 5                    # final sections
+RECALL_TOP_N = 20            # candidates sent to rerank
+SNIPPET_CHARS = 1000         # snippet length
+OUTLINE_ROOT = ROOT / "pdf_files" / "output"
+```
 
 ---
 
-## 5 Troubleshooting
+## Troubleshooting
 
-| Symptom | Likely cause & fix |
-|---------|-------------------|
-| `ModuleNotFoundError: doclayout_yolo` | Ensure `main/doclayout_yolo.py` exists and import path matches. |
-| `FileNotFoundError: models/model.pt` | Place the YOLO checkpoint in `models/`. |
-| `[WARN] No heading JSONs in …/output_json` when ranking | Run `extract_headings.py` first so per-PDF JSONs exist. |
-| CUDA OOM | Edit scripts to load models on CPU (`device="cpu"`). |
+- **No final JSONs**: Ensure each collection has `challenge1b_input.json` and PDFs in `PDFS/`.
+- **“no headings found – skipped”**: Missing outline JSONs. Confirm files exist under `pdf_files/output/` with names matching the PDF stems.
+- **Wrong page numbers / snippets**: Outline JSONs must use **1‑based** page numbers (the script subtracts 1 only when extracting text).
+- **Everything comes from one PDF**: Keep the cross‑encoder rerank enabled and make sure outlines exist for all PDFs (Cities, Things to Do, Cuisine, etc.).
+- **Outlines landed in `output/` at repo root**: Move them to `pdf_files/output/` or update `OUTLINE_ROOT`.
 
 ---
 
-## 6 `.gitignore` Highlights
+## Requirements
+- Python 3.9+
+- `sentence-transformers`, `torch`, `transformers`, `PyMuPDF` (fitz)
+
+Install all with:
+```bash
+pip install -r requirements.txt
+```
+
+> Runs on CPU by default. To enable CUDA, change the `device` for both models in `Persona_pdfs.py`.
+
+---
+
+## .gitignore tips (macOS)
+Add these if you see Finder sidecar files in `git status`:
+```
+.DS_Store
+._*
+.AppleDouble
+.Spotlight-V100
+.Trashes
+.fseventsd
+Icon?
+```
+
+---
+
+## License
+Internal use for Adobe India Hackathon 2025 – Challenge 1B. Adapt as needed for your submission.
 
 
